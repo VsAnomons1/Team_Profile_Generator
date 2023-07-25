@@ -1,0 +1,51 @@
+:root {
+    --bs-body-font-family: "Tektur", cursive;
+}
+body {
+    font-family: var(--bs-body-font-family);
+}
+a {
+ color:#69ccf3; 
+ text-decoration: none;  
+}
+a:link {
+    color: #69ccf3;
+}
+a:hover {
+    color: #3030867b;
+}
+
+header {
+    border-bottom: 0.5em solid black;
+    background: linear-gradient(90deg, #2f6da1, #2f6ea144);
+}
+main {
+    background-color: rgb(76, 111, 122);
+}
+.icons {
+    width: 3em;
+    height: 2em;
+}
+.list-group-horizontal {
+  --bs-list-group-border-color: none;
+   --bs-list-group-bg: transparent;
+   justify-content: space-between;
+}
+.card {
+    margin: 0.5em;
+    width: 20em;
+    border-radius: 0.5em;
+    background-color: azure;
+    box-shadow: 0em 0em 0.3em 0.2em black;
+}
+.card-header {
+    margin-left:-0.8em;
+    margin-right: -0.7em;
+    background-color: rgb(233, 233, 216);
+}
+
+@media screen and(max-width: 300px){
+    .card {
+        width: 15em;
+    }
+}
