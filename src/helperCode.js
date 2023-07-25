@@ -11,15 +11,16 @@ var homePageHtml = function (teamMembers){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Team Generator</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
-      <div class = 'container-fluid vh-100'>
-        <div class="row h-100">
+      <div class = 'container-fluid vh-100 overflow-auto'>
+        <div class="row h-100 overflow-auto">
             <header class="d-flex justify-content-center align-items-center col-12 h-25 bg-primary">
                 <h2>Dev Team</h2>
             </header>
-            <main class="col-12 h-75 bg-secondary">
-                <div class="row">
+            <main class="col-12 h-75 overflow-auto">
+                <div class="row justify-content-center">
                     ${team}
                 </div>
             </main>
@@ -34,10 +35,19 @@ var homePageHtml = function (teamMembers){
 var managerHtml = function (manager) {
     var managerCard = ` 
 <div class="col-10 col-md-6 col-lg-4 card ms-5 mt-3">
-    <div class="card-header">
-        <h4>${manager.name}</h4>
-        <h5>Manager</h5>
+<div class="card-header">
+<ul class="list-group list-group-horizontal">
+<li class="list-group-item">
+    <h4>${manager.name}</h4>
+    <h5>Manager</h5>
+</li>   
+<li class="list-group-item">
+    <div class="icons">
+        <img class="img-fluid" src="images/manager_icon.png" alt="a manager icon">
     </div>
+</li>
+</ul>
+</div>
     <div class="card-body">
         <ul class="list-group">
             <li class="list-group-item">ID: ${manager.id}</li>
@@ -52,10 +62,19 @@ var managerHtml = function (manager) {
 var engineerHtml = function (engineer) {
     var engineerCard = ` 
 <div class="col-10 col-md-6 col-lg-4 card ms-5 mt-3">
-    <div class="card-header">
-        <h4>${engineer.name}</h4>
-        <h5>Manager</h5>
+<div class="card-header">
+<ul class="list-group list-group-horizontal">
+<li class="list-group-item">
+    <h4>${engineer.name}</h4>
+    <h5>Engineer</h5>
+</li>   
+<li class="list-group-item">
+    <div class="icons">
+        <img class="img-fluid" src="images/engineer_icon.png" alt="a engineer icon">
     </div>
+</li>
+</ul>
+</div>
     <div class="card-body">
         <ul class="list-group">
             <li class="list-group-item">ID: ${engineer.id}</li>
@@ -70,10 +89,19 @@ var engineerHtml = function (engineer) {
 var internHtml = function (intern) {
     var internCard = ` 
 <div class="col-10 col-md-6 col-lg-4 card ms-5 mt-3">
-    <div class="card-header">
-        <h4>${intern.name}</h4>
-        <h5>Manager</h5>
+<div class="card-header">
+<ul class="list-group list-group-horizontal">
+<li class="list-group-item">
+    <h4>${intern.name}</h4>
+    <h5>Intern</h5>
+</li>   
+<li class="list-group-item">
+    <div class="icons">
+        <img class="img-fluid" src="images/intern_icon.png" alt="a intern icon">
     </div>
+</li>
+</ul>
+</div>
     <div class="card-body">
         <ul class="list-group">
             <li class="list-group-item">ID: ${intern.id}</li>
